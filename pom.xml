@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.demo.app</groupId>
+  <artifactId>demo</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>demo</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <spring-boot-version>1.5.10.RELEASE</spring-boot-version>
+    <msyql-version>6.0.6</msyql-version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring-boot-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+        <version>${spring-boot-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${msyql-version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>demo-app-service</module>
+    <module>demo-app-interface</module>
+    <module>demo-app-dto</module>
+    <module>demo-app-vo</module>
+    <module>demo-app-component</module>
+    <module>demo-app-dao</module>
+    <module>demo-app-config</module>
+    <module>demo-app-controller</module>
+  </modules>
+</project>
